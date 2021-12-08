@@ -2,11 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const router = express.Router();
 const app = express();
+const path = require('path');
 const expressEjsLayout = require('express-ejs-layouts')
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require("passport");
-
 //passport config:
 require('./config/passport')(passport)
     //mongoose
@@ -36,7 +36,7 @@ app.use((req, res, next) => {
 })
 
 //Routes
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
-
 app.listen(3000);
