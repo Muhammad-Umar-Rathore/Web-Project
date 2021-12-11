@@ -1,3 +1,20 @@
-<h1>Dashboard</h1>
-<p> Welcome <%= user.name %></p>
-<a href="/users/logout">Logout</a>
+<style>
+    body {
+        background-image: url('/images/car3.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+<style>
+    .center {
+        text-align: center;
+    }
+</style>
+<div class="center">
+    <h1>Dashboard</h1>
+    <p style="font-size: larger;"> Welcome
+        <%= user.name %>
+    </p>
+    <a href="/users/logout">Logout</a>
+</div>
