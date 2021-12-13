@@ -11,6 +11,8 @@ const passport = require("passport");
 //passport config:
 
 
+
+
 require('./config/passport')(passport)
     //mongoose
 mongoose.connect('mongodb://localhost/test', { useNewUrlParser: true, useUnifiedTopology: true })
